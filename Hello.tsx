@@ -1,5 +1,20 @@
 import React from 'react';
+import { Line } from '@nivo/line';
+import { random } from 'faker';
+
+const random0to60 = () => random.number({ min: 0, max: 60 });
+
+const data = [...Array(3)]
+  .fill(1)
+  .map((_, j) => {
+    return { x: `${j+1}`, y: random0to60() }
+  });
 
 export const Hello = () => {
-  return (<h1>Helloz {name}!</h1>)
+  return (<Line
+    width={900}
+    height={400}
+    margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+    data={data}
+  />)
 };
