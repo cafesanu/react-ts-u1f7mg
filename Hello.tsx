@@ -6,7 +6,7 @@ const random0to60 = () => random.number({ min: 0, max: 60 });
 console.log(Math.random() +1)
 
 const generateData = (num = 12) => {
-  return [...Array(4)].map((_, i) => ({
+  return [...Array(4)].fill(1).map((_, i) => ({
     id: `data${i + 1}`,
     data: [...Array(num)].map((_, j) => ({ x: `${j + 1}`, y: random0to60() })),
   }));
@@ -78,7 +78,7 @@ export const Hello = () => {
           type: 'linear',
           stacked: stacked,
         }}
-        areaOpacity={0.8}
+        areaOpacity={1}
       />
     </div>
   )
