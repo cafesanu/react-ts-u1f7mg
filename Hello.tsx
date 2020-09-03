@@ -1,3 +1,5 @@
 import React from 'react';
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+export const Hello = () => {
+  return (<h1>Helloz {name}!</h1>)
+};
