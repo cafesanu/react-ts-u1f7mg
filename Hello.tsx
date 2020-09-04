@@ -3,7 +3,6 @@ import { Line } from '@nivo/line';
 import { random } from 'faker';
 
 const random0to60 = () => random.number({ min: 0, max: 60 });
-console.log(Math.random() +1)
 
 const generateData = (num = 12) => {
   return [...Array(4)].fill(1).map((_, i) => ({
